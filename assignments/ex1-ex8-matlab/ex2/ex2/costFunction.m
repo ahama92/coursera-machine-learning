@@ -20,12 +20,8 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
-
-
-
-
-
-
+J = -(y'*log(1.0./(1.0+exp(-X*theta)))+(1.0-y)'*log(1.0-1.0./(1+exp(-X*theta))))/m;
+grad = ((1.0./(1.0+exp(-X*theta))-y)'*X)'/m;
 
 % =============================================================
 
